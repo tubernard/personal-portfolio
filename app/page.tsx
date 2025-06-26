@@ -1,21 +1,32 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from "app/components/posts";
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+      <h1 className="mb-6 text-2xl font-semibold tracking-tighter">
+        Tal Bernard
       </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
-      <div className="my-8">
-        <BlogPosts />
+      <h2 className=" text-xl tracking-tighter">
+        Software engineer + solar industry professional
+      </h2>
+      <h2 className="mb-4 text-xl tracking-tighter">based in Los Angeles</h2>
+      <div className="relative w-full">
+        <img
+          src="/images/solar.jpg"
+          alt="solar panels on roof"
+          className="w-full rounded-lg filter grayscale-[0.5] contrast-110 brightness-95 mix-blend-multiply"
+          style={{ zIndex: 1 }}
+        />
+        <div
+          className="absolute inset-0 rounded-lg pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(120deg, rgba(0,212,255,0.13) 0%, rgba(2,0,36,0.08) 100%)",
+            zIndex: 2,
+          }}
+        />
       </div>
+      <div className="my-8"></div>
     </section>
-  )
+  );
 }
