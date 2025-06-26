@@ -9,7 +9,7 @@ export default function Page() {
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">About</h1>
       <p className="mb-4">
         I'm a solar project engineer turned software developer with a deep
-        interest in how complex systems work under the hood. Before I pivoted to
+        interest in how systems work under the hood. Before I pivoted to
         software, I was creating utility interconnection strategies for
         commercial solar projects and debugging solar inverters in the field.
         That early exposure to how physical infrastructure runs (and
@@ -28,7 +28,7 @@ export default function Page() {
         At PowerFlex, I contributed to full-stack software development in
         support of EV charging, solar, and battery storage projects. I built
         services that enabled users to control distributed energy assets,
-        visualize asset metric data, and tools to aid system troubleshooting.
+        visualize asset metric data, and reduce time spent troubleshooting.
         Working on these solutions strengthened my understanding of how software
         can drive efficiency and reliability in clean energy systems.
         <br />

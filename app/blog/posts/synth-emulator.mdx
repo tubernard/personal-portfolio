@@ -1,0 +1,63 @@
+---
+title: "Building a synthesizer in the browser with Tone.js"
+publishedAt: "2025-06-26"
+tags: ["TypeScript", "Web Audio API", "Tone.js", "Synthesizer", "Vite"]
+description: "A personal exploration into creating a browser-based synthesizer inspired by the Prophet Rev2."
+---
+
+I've always been intrigued by the sound and design of analog synthesizers. Recently I decided to channel that interest into building a browser-based software emulation of a synthesizer that I own, the Prophet Rev2. TLDR: My version does not sound as good. But it was fun to experiment with the Web Audio API and Tone.js.
+
+<a
+  href="https://tubernard.github.io/synth-emulator/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  **You can try the live demo here** ↗
+</a>
+
+<Image
+  src="/images/synth-emulator.jpg"
+  width={800}
+  height={400}
+  alt="Browser-based synthesizer interface"
+  className="w-full max-w-2xl h-auto rounded-lg"
+  priority
+/>
+
+## The Building Blocks
+
+- **Dual Oscillators:** The core sound comes from two oscillators per voice, which can be set to sawtooth, triangle, or square waveforms.
+- **Low-Pass Filter:** A low-pass filter that shapes the timbre by attenuating frequencies above the cutoff point.
+- **Dual LFOs:** Two Low-Frequency Oscillators that can be routed to either the filter's cutoff frequency or the pitch of the main oscillators.
+
+## Browser vs. Hardware: A Feature Comparison
+
+The Prophet Rev2 is an incredibly deep instrument, and while my version is only a digital representation, I tried to stay true to some of its core design principles.
+
+<Image
+  src="/images/prophet.jpg"
+  width={800}
+  height={400}
+  alt="Browser-based synthesizer interface"
+  className="w-full max-w-2xl h-auto rounded-lg"
+/>
+
+### Where It's Similar
+
+- **Signal Path:** The basic architecture of `Oscillators -> Filter -> Amplifier` follows the Prophet's design at a basic level.
+- **8-Voice Polyphony:** The synth can play up to 8 notes at once, matching the base model of the Rev2 and allowing for full, rich chords.
+- **LFO Routing:** The ability to modulate the filter and oscillator pitch is a fundamental part of the Prophet's sound-design workflow.
+
+### Where It Differs
+
+- **Analog vs. Digital Architecture:** The Rev2 is fundamentally an analog synthesizer with DCOs and true analog filters. My browser version is entirely digital, running through the Web Audio API—a completely different approach in terms of sound generation and character.
+- **Modulation Matrix:** The hardware includes an 8-slot modulation matrix. My version has a much simpler, fixed routing system for its LFOs.
+
+## What's Next
+
+Looking ahead, there are a few features I might implement when I have time:
+
+1.  **Adding Filter Resonance:** This would add depth and lend itself to a more authentic analog sound.
+2.  **Saving Patches:** Allowing users to save and load their creations using `localStorage` would add a lot of utility.
+
+Feel free to explore the source code on [GitHub](https://github.com/tubernard/synth-emulator).
