@@ -4,10 +4,14 @@ export default function Page() {
       <h1 className="mb-6 text-2xl font-semibold tracking-tighter">
         Tal Bernard
       </h1>
-      <h2 className=" text-xl tracking-tighter">
-        Software engineer + solar industry professional
+      <h2 className="text-xl tracking-tighter">
+        Software engineer +<br className="sm:hidden" /> solar industry
+        professional
       </h2>
-      <h2 className="mb-4 text-xl tracking-tighter">based in Los Angeles</h2>
+      <h2 className="mb-4 text-xl tracking-tighter">
+        <span className="hidden sm:inline">based in Los Angeles</span>
+        <span className="sm:hidden mt-">based in Los Angeles</span>
+      </h2>
       <div className="relative w-full">
         <img
           src="/images/solar.jpg"
