@@ -5,7 +5,7 @@ export default function Page() {
         Tal Bernard
       </h1>
       <h2 className="text-xl tracking-tighter">
-        Software engineer +<br className="sm:hidden" /> solar industry
+        software engineer +<br className="sm:hidden" /> solar industry
         professional
       </h2>
       <h2 className="mb-4 text-xl tracking-tighter">
