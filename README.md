@@ -17,9 +17,3 @@ pnpm install
 # Run the development server
 pnpm dev
 ```
-
-The site will be available at [http://localhost:3000](http://localhost:3000)
-
-## Contact Information
-
-Contact details are available on the site.
