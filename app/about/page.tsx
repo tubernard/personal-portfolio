@@ -34,7 +34,7 @@ export default function Page() {
         <br />
         <br />
         Outside of work, I spend time on music production and sound design,
-        where I enjoy experimenting with how various components influence and
+        where I enjoy experimenting with how discrete elements come together to
         shape sound. Lately, I’ve been exploring sound design through the lens
         of code, finding creative ways to combine my interests in software and
         music.
